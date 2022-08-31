@@ -6,24 +6,19 @@ function draw() {
   background(255);
   noStroke();
   fill(0, 230, 118);
-  rect(0, 0, width, height / 10);
-  if (height > width) {
-    triangle(width / 2, height / 4, 0.4 * width, height / 3, 0.6 * width, height / 3);
-    triangle(width / 2, height / 3.5, 0.35 * width, height / 2.5, 0.65 * width, height / 2.5);
-    triangle(width / 2, height / 3, 0.3 * width, height / 2, 0.7 * width, height / 2);
-    triangle(width / 2, height / 2.75, 0.225 * width, height / 1.5, 0.775 * width, height / 1.5);
-    fill("#916714");
-    rect(0.4 * width, height / 1.5, width / 5, height / 10);
-  } else {
-    triangle(width / 2, height / 4, 0.45 * width, height / 3, 0.55 * width, height / 3);
-    triangle(width / 2, height / 3.5, 0.425 * width, height / 2.5, 0.575 * width, height / 2.5);
-    triangle(width / 2, height / 3, 0.4 * width, height / 2, 0.6 * width, height / 2);
-    triangle(width / 2, height / 2.75, 0.35 * width, height / 1.5, 0.65 * width, height / 1.5);
-    fill("#916714");
-    rect(0.475 * width, height / 1.5, width / 20, height / 10);
-  }
-  fill(255, 255, 255);
+  rect(0, 0, width, width / 25);
+  triangle(width / 2 - 50, height / 2 - 50, width / 2, height / 2 - 150, width / 2 + 50, height / 2 - 50)
+  triangle(width / 2 - 100, height / 2 + 75, width / 2, height / 2 - 100, width / 2 + 100, height / 2 + 75)
+  triangle(width / 2 - 130, height / 2 + 200, width / 2, height / 2, width / 2 + 130, height / 2 + 200)
+  fill("#7d3c0d")
+  rect(width / 2 - 25, height / 2 + 200, 50, 50)
+
+  fill(255, 255, 255)
+
   textSize(height / 20);
+
   textAlign(CENTER, CENTER);
+
   text("Merry Christmas!", width / 2, height / 20);
+
 }
