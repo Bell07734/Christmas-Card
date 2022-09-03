@@ -1,20 +1,52 @@
 function setup() {
   createCanvas(windowWidth, windowHeight - 5);
-}
 
-function draw() {
   background(255);
   noStroke();
-  fill(0, 230, 118);
 
+  fill("#6D3D14")
+  rect(width / 2 - 25, height / 2 + 200, 50, 50)
+
+  fill("#95E06C");
   rect(0, 0, width, 100);
-
 
   triangle(width / 2 - 50, height / 2 - 50, width / 2, height / 2 - 150, width / 2 + 50, height / 2 - 50)
   triangle(width / 2 - 100, height / 2 + 75, width / 2, height / 2 - 100, width / 2 + 100, height / 2 + 75)
   triangle(width / 2 - 130, height / 2 + 200, width / 2, height / 2, width / 2 + 130, height / 2 + 200)
-  fill("#7d3c0d")
-  rect(width / 2 - 25, height / 2 + 200, 50, 50)
+
+  colours = ["#FFBC42", "#F95738", "#30BCED", "#88498F"]
+
+  fill(random(colours))
+  circle(width / 2 - 20, height / 2 - 80, 25)
+  fill(random(colours))
+  circle(width / 2 + 10, height / 2 - 110, 25)
+  // fill(random(colours))
+  // circle(width / 2 + 30, height / 2 - 80, 25)
+
+  fill(random(colours))
+  circle(width / 2 - 50, height / 2, 25)
+  fill(random(colours))
+  circle(width / 2 + 25, height / 2 + 50, 25)
+  fill(random(colours))
+  circle(width / 2 + 30, height / 2 - 10, 25)
+  fill(random(colours))
+  circle(width / 2 - 50, height / 2 + 45, 25)
+  fill(random(colours))
+  circle(width / 2, height / 2 - 45, 25)
+
+  fill(random(colours))
+  circle(width / 2 + 10, height / 2 + 90, 25)
+  fill(random(colours))
+  circle(width / 2 - 75, height / 2 + 150, 25)
+  fill(random(colours))
+  circle(width / 2 + 55, height / 2 + 135, 25)
+  fill(random(colours))
+  circle(width / 2 - 35, height / 2 + 190, 25)
+  fill(random(colours))
+  circle(width / 2 - 30, height / 2 + 105, 25)
+  fill(random(colours))
+  circle(width / 2 + 15, height / 2 + 175, 25)
+
 
   fill(255, 255, 255)
   textSize(48);
@@ -22,5 +54,9 @@ function draw() {
   textAlign(CENTER, CENTER);
 
   text("Merry Christmas!", width / 2, 50);
+
+}
+
+function draw() {
 
 }
