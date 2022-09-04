@@ -45,6 +45,10 @@ function setup() {
 }
 
 function draw() {
+  update_baubles()
+}
+
+function update_baubles() {
   for (let bauble of baubles) {
     if (bauble.clicked()) {
       bauble.change_colour()
