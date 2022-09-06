@@ -1,5 +1,18 @@
+let card
+let paper1, paper2
+let currentLocation
+
 function setup() {
-  createCanvas(windowWidth, windowHeight - 5);
+  front = createCanvas(350, 500);
+  front.parent("f1")
+
+  card = document.querySelector("#card");
+  card.addEventListener("click", cardClicked)
+
+  paper1 = document.querySelector("#p1");
+  paper2 = document.querySelector("#p2");
+
+  currentLocation = 1;
 
   background(255);
   noStroke();
@@ -8,7 +21,6 @@ function setup() {
   rect(width / 2 - 25, height / 2 + 200, 50, 50)
 
   fill("#95E06C");
-  rect(0, 0, width, 100);
 
   triangle(width / 2 - 50, height / 2 - 50, width / 2, height / 2 - 150, width / 2 + 50, height / 2 - 50)
   triangle(width / 2 - 100, height / 2 + 75, width / 2, height / 2 - 100, width / 2 + 100, height / 2 + 75)
@@ -50,9 +62,34 @@ function draw() {
 
 function update_baubles() {
   for (let bauble of baubles) {
-    if (bauble.clicked()) {
-      bauble.change_colour()
-    }
     bauble.draw()
   }
+}
+
+function cardClicked() {
+  for (let bauble of baubles) {
+    if (bauble.touching_mouse()) {
+      bauble.change_colour()
+      return
+    }
+  }
+  if (currentLocation == 1) {
+    openCard()
+    paper1.classList.add("flipped")
+    paper1.style.zindex = 1
+    currentLocation = 2
+  } else if (currentLocation == 2) {
+    closeCard()
+    paper1.classList.remove("flipped")
+    paper1.style.zindex = 2
+    currentLocation = 1
+  }
+}
+
+function openCard() {
+  card.style.transform = "translateX(50%)"
+}
+
+function closeCard() {
+  card.style.transform = "translateX(0%)"
 }

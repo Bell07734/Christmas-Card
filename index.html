@@ -1,22 +1,44 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
 	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+		/>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>Merry Christmas</title>
-		<style>
-			body {
-				padding: 0;
-				margin: 0;
-			}
-		</style>
+		<link rel="stylesheet" href="style.css" />
+
 		<script src="lib/p5.js"></script>
 		<script src="lib/p5.sound.min.js"></script>
 		<script src="bauble.js"></script>
 		<script src="sketch.js"></script>
 	</head>
-
 	<body>
-		<main></main>
+		<div id="card" class="card" style="cursor: pointer">
+			<div id="p1" class="paper">
+				<div class="front">
+					<div id="f1" class="front-content"></div>
+				</div>
+				<div class="back">
+					<div id="b1" class="back-content">
+						<h1>Back 1</h1>
+					</div>
+				</div>
+			</div>
+			<div id="p2" class="paper">
+				<div class="front">
+					<div id="f2" class="front-content">
+						<h1>Front 2</h1>
+					</div>
+				</div>
+				<div class="back">
+					<div id="b2" class="back-content">
+						<h1>Back 2</h1>
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>

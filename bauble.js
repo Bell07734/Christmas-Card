@@ -10,17 +10,9 @@ class Bauble {
         fill(this.colour)
         circle(this.x, this.y, 25)
     }
-    clicked() {
-        if (mouseIsPressed && dist(this.x, this.y, mouseX, mouseY) <= 25) {
-            if (!this.isPressed) {
-                this.isPressed = true
-                return true
-            } else {
-                return false
-            }
-        } else {
-            this.isPressed = false
-            return false
+    touching_mouse() {
+        if (dist(this.x, this.y, mouseX, mouseY) <= 25) {
+            return true
         }
     }
     change_colour() {
