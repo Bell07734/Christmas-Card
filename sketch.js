@@ -48,12 +48,12 @@ function setup() {
     baubles.push(new Bauble(location[0], location[1]))
   }
 
-  fill(255, 255, 255)
-  textSize(48);
+  fill(240);
+  textSize(40);
+  textFont("Patrick Hand")
 
-  textAlign(CENTER, CENTER);
-
-  text("Merry Christmas!", width / 2, 50)
+  textAlign(RIGHT, TOP);
+  text("Click", 325, 25)
 }
 
 function draw() {
