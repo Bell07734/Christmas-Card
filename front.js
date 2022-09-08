@@ -53,7 +53,8 @@ function setup() {
   textFont("Patrick Hand")
 
   textAlign(RIGHT, TOP);
-  text("Click", 325, 25)
+  text("Click to", 325, 25)
+  text("open", 325, 60)
 }
 
 function draw() {
