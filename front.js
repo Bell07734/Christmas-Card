@@ -91,7 +91,7 @@ function openCard() {
   if (windowWidth >= 700) {
     card.style.transform = "translateX(50%)"
   } else {
-    card.style.transform = "translateX(10%)"
+    card.style.transform = "translateX(5%)"
   }
 }
 
