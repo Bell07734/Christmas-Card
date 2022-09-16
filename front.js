@@ -1,6 +1,11 @@
 let card
 let paper1, paper2
 let currentLocation
+let music
+
+function preload() {
+  music = loadSound("WeWishYouAMerryXmas.mp3")
+}
 
 function setup() {
   front = createCanvas(350, 500);
@@ -79,11 +84,17 @@ function cardClicked() {
     paper1.classList.add("flipped")
     paper1.style.zindex = 1
     currentLocation = 2
+    if (!music.isPlaying()) {
+      music.play()
+    }
   } else if (currentLocation == 2) {
     closeCard()
     paper1.classList.remove("flipped")
     paper1.style.zindex = 2
     currentLocation = 1
+    if (music.isPlaying()) {
+      music.stop()
+    }
   }
 }
 
