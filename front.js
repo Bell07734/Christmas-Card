@@ -13,6 +13,11 @@ function setup() {
 	front = createCanvas(350, 500);
 	front.parent("f1");
 
+	if (windowHeight < windowWidth) {
+		console.log("landscape");
+		document.getElementById("credits").style.display = "none";
+	}
+
 	card = document.querySelector("#card");
 	card.addEventListener("click", cardClicked);
 
