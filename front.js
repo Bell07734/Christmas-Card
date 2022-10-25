@@ -14,12 +14,11 @@ function setup() {
 	front.parent("f1");
 
 	if (windowHeight > windowWidth) {
-		console.log("landscape");
 		document.getElementById("credits").style.display = "block";
 	}
 
 	card = document.querySelector("#card");
-	card.addEventListener("click", cardClicked);
+	card.addEventListener("mousedown", cardClicked);
 
 	paper1 = document.querySelector("#p1");
 	paper2 = document.querySelector("#p2");
