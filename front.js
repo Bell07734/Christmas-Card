@@ -19,6 +19,7 @@ function setup() {
 
 	card = document.querySelector("#card");
 	card.addEventListener("mousedown", cardClicked);
+	card.addEventListener("touch", cardClicked);
 
 	paper1 = document.querySelector("#p1");
 	paper2 = document.querySelector("#p2");
