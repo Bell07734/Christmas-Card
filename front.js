@@ -172,6 +172,10 @@ function tree() {
 		width / 2 + 130,
 		height / 2 + 200
 	);
+
+	//STAR
+	fill("#ffe81d");
+	star(width / 2, height / 2 - 150, 15, 40);
 }
 
 function messsage() {
@@ -182,4 +186,19 @@ function messsage() {
 	textAlign(RIGHT, TOP);
 	text("Click to", 325, 25);
 	text("open", 325, 60);
+}
+
+function star(x, y, radius1, radius2) {
+	let angle = TWO_PI / 5.0;
+	let halfAngle = angle / 2.0;
+	beginShape();
+	for (let a = 60; a < TWO_PI + 60; a += angle) {
+		let sx = x + cos(a) * radius2;
+		let sy = y + sin(a) * radius2;
+		vertex(sx, sy);
+		sx = x + cos(a + halfAngle) * radius1;
+		sy = y + sin(a + halfAngle) * radius1;
+		vertex(sx, sy);
+	}
+	endShape(CLOSE);
 }
