@@ -19,12 +19,12 @@ class Bauble {
 		fill(this.colour);
 		circle(this.x, this.y, 25);
 	}
-	touching_mouse() {
+	touchingMouse() {
 		if (dist(this.x, this.y, mouseX, mouseY) <= 25) {
 			return true;
 		}
 	}
-	change_colour() {
+	changeColour() {
 		this.colour = this.colours[this.colours.indexOf(this.colour) + 1];
 	}
 }

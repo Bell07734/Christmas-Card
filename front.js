@@ -82,17 +82,17 @@ function draw() {
 	tree();
 	messsage();
 
-	update_baubles();
-	update_lights();
+	updateBaubles();
+	updateLights();
 }
 
-function update_baubles() {
+function updateBaubles() {
 	for (let bauble of baubles) {
 		bauble.draw();
 	}
 }
 
-function update_lights() {
+function updateLights() {
 	for (let i = 0; i < lights.length; i++) {
 		light = lights[i];
 		if (i % 2 == floor(counter / 500) % 2) {
@@ -106,8 +106,8 @@ function update_lights() {
 
 function cardClicked() {
 	for (let bauble of baubles) {
-		if (bauble.touching_mouse()) {
-			bauble.change_colour();
+		if (bauble.touchingMouse()) {
+			bauble.changeColour();
 			return;
 		}
 	}
