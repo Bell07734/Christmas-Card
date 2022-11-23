@@ -10,7 +10,16 @@ body {
 	align-items: center;
 
 	font-family: Patrick Hand;
-	background-color: powderblue;
+	background-color: #091540;
+	overflow: hidden;
+}
+
+#credits {
+	color: white;
+}
+
+a {
+	color: #7692ff;
 }
 
 p {
@@ -19,8 +28,32 @@ p {
 
 h1 {
 	font-size: 50px;
+	background: linear-gradient(
+		45deg,
+		#e84855,
+		#f19259,
+		#f9dc5c,
+		#a5bf82,
+		#50a2a7,
+		#646899,
+		#772d8b,
+		#b03b70,
+		#e84855
+	);
+	background-size: 400%;
+	background-clip: border-box;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	animation: animate 20s linear infinite;
 }
-
+@keyframes animate {
+	0% {
+		background-position: 0%;
+	}
+	100% {
+		background-position: 400%;
+	}
+}
 h2 {
 	font-size: 30px;
 	color: #f0f0f0;
