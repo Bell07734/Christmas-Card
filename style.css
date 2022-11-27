@@ -16,6 +16,10 @@ body {
 
 #credits {
 	color: white;
+	position: absolute;
+	right: 0;
+	left: 0;
+	text-align: center;
 }
 
 a {
@@ -77,6 +81,7 @@ h3 {
 
 	transition: transform 0.5s;
 	box-shadow: 0 6px 20px 0 rgba(0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
 }
 
 .paper {

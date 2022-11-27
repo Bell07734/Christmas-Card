@@ -8,7 +8,7 @@ let baubles;
 
 new p5(function (p5) {
 	p5.preload = function () {
-		music = p5.loadSound("WeWishYouAMerryXmas.mp3");
+		music = new Audio("WeWishYouAMerryXmas.mp3");
 	};
 
 	p5.setup = function () {
@@ -118,17 +118,13 @@ new p5(function (p5) {
 			paper1.classList.add("flipped");
 			paper1.style.zindex = 1;
 			currentLocation = 2;
-			if (!music.isPlaying()) {
-				music.play();
-			}
+			music.play();
 		} else if (currentLocation == 2) {
 			closeCard();
 			paper1.classList.remove("flipped");
 			paper1.style.zindex = 2;
 			currentLocation = 1;
-			if (music.isPlaying()) {
-				music.stop();
-			}
+			music.pause();
 		}
 	}
 

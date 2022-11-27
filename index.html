@@ -11,44 +11,44 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
 			rel="stylesheet" />
-
+		<link rel="icon" type="image/x-icon" href="favicon.ico" />
 		<script src="lib/p5.js"></script>
 		<script src="lib/p5.sound.min.js"></script>
-		<script src="bauble.js"></script>
-		<script src="light.js"></script>
 		<script src="front.js"></script>
 		<script src="background.js"></script>
 	</head>
 	<body style="flex-direction: column">
 		<div id="bg" style="position: absolute"></div>
-		<div id="card" class="card" style="cursor: pointer">
-			<div id="p1" class="paper">
-				<div class="front">
-					<div id="f1" class="front-content"></div>
-				</div>
-				<div class="back">
-					<div id="b1" class="back-content">
-						<p>
-							Music by <a href="https://audionautix.com/">audionautix.com</a>
-						</p>
-						<p>Made by Oliver</p>
+		<div id="other" style="position: absolute">
+			<div id="card" class="card" style="cursor: pointer">
+				<div id="p1" class="paper">
+					<div class="front">
+						<div id="f1" class="front-content"></div>
+					</div>
+					<div class="back">
+						<div id="b1" class="back-content">
+							<p>
+								Music by <a href="https://audionautix.com/">audionautix.com</a>
+							</p>
+							<p>Made by Oliver</p>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div id="p2" class="paper">
-				<div class="front">
-					<div id="f2" class="front-content">
-						<h3>Click the baubles to change the colour</h3>
-						<h1>Merry Christmas</h1>
-						<h2>Click to Close</h2>
+				<div id="p2" class="paper">
+					<div class="front">
+						<div id="f2" class="front-content">
+							<h3>Click the baubles to change the colour</h3>
+							<h1>Merry Christmas</h1>
+							<h2>Click to Close</h2>
+						</div>
 					</div>
+					<div class="back"></div>
 				</div>
-				<div class="back"></div>
 			</div>
-		</div>
-		<div id="credits" style="display: none">
-			<p>Music by <a href="https://audionautix.com/">audionautix.com</a></p>
-			<p>Made by Oliver</p>
+			<div id="credits" style="display: none">
+				<p>Music by <a href="https://audionautix.com/">audionautix.com</a></p>
+				<p>Made by Oliver</p>
+			</div>
 		</div>
 	</body>
 </html>

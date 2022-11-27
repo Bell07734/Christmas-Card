@@ -23,6 +23,7 @@ new p5(function (p5) {
 		this.posY = p5.random(-50, 0);
 		this.initialangle = p5.random(0, 2 * p5.PI);
 		this.size = p5.random(2, 5);
+		this.transparency = p5.random(100, 255);
 
 		this.radius = p5.sqrt(p5.random(p5.pow(p5.width / 2, 2)));
 
@@ -37,6 +38,7 @@ new p5(function (p5) {
 				let index = snowflakes.indexOf(this);
 				snowflakes.splice(index, 1);
 			}
+			p5.fill(255, 255, 255, this.transparency);
 			p5.ellipse(this.posX, this.posY, this.size);
 		};
 	}
