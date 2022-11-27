@@ -29,16 +29,16 @@ p {
 h1 {
 	font-size: 50px;
 	background: linear-gradient(
-		45deg,
-		#e84855,
-		#f19259,
-		#f9dc5c,
-		#a5bf82,
-		#50a2a7,
-		#646899,
-		#772d8b,
-		#b03b70,
-		#e84855
+		90deg,
+		#f94144,
+		#f3722c,
+		#f8961e,
+		#f9c74f,
+		#90be6d,
+		#43aa8b,
+		#577590,
+		#a85b6a,
+		#f94144
 	);
 	background-size: 400%;
 	background-clip: border-box;
@@ -76,6 +76,7 @@ h3 {
 	height: 500px;
 
 	transition: transform 0.5s;
+	box-shadow: 0 6px 20px 0 rgba(0, 0, 0);
 }
 
 .paper {
@@ -102,7 +103,7 @@ h3 {
 .front {
 	z-index: 1;
 	backface-visibility: hidden;
-	border-left: 1px solid powderblue;
+	border-left: 1px solid lightgrey;
 }
 
 .back {
