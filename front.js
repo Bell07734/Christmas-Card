@@ -5,6 +5,7 @@ let music;
 let counter = 0.0;
 let lights;
 let baubles;
+let presents;
 
 new p5(function (p5) {
 	p5.preload = function () {
@@ -71,6 +72,11 @@ new p5(function (p5) {
 		for (let location of lightLocations) {
 			lights.push(new Light(location[0], location[1]));
 		}
+
+		presents = [
+			new Present(20, p5.height - 60, 70, 60),
+			new Present(p5.width - 90, p5.height - 80, 80, 80),
+		];
 	};
 
 	p5.draw = function () {
@@ -86,6 +92,8 @@ new p5(function (p5) {
 
 		updateBaubles();
 		updateLights();
+
+		drawPresents();
 	};
 
 	function updateBaubles() {
@@ -199,6 +207,31 @@ new p5(function (p5) {
 			p5.vertex(sx, sy);
 		}
 		p5.endShape(p5.CLOSE);
+	}
+
+	function drawPresents() {
+		for (let present of presents) {
+			present.draw();
+		}
+	}
+	class Present {
+		constructor(x, y, width, height) {
+			this.x = x;
+			this.y = y;
+			this.width = width;
+			this.height = height;
+
+			let colours = ["#FFBC42", "#F95738", "#30BCED", "#88498F"];
+			this.colour1 = colours.splice(p5.random(0, colours.length), 1);
+			this.colour2 = colours.splice(p5.random(0, colours.length), 1);
+		}
+		draw() {
+			p5.fill(this.colour1);
+			p5.rect(this.x, this.y, this.width, this.height);
+			p5.fill(this.colour2);
+			p5.rect(this.x, this.y + this.height / 2 - 5, this.width, 10);
+			p5.rect(this.x + this.width / 2 - 5, this.y, 10, this.height);
+		}
 	}
 	class Bauble {
 		constructor(x, y) {
